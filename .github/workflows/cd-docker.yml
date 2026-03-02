@@ -33,8 +33,6 @@ jobs:
           username: 'root'
           password: 'se@npru2026'
           port: '22'
-          connect_timeout: 30s
-          debug: true
           script: |
             docker logout ghcr.io
             docker login -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}  ghcr.io/${{ github.actor }}/${{ github.event.repository.name }}
